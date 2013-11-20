@@ -1,0 +1,108 @@
+{
+    "name": "MonitorDecommission”,
+    "owner": "admin",
+    "plots": [
+        {
+            "chartType": "stackarea",
+            "facetting": "clusterId",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "Cluster Network IO",
+            "titleResourceId": "message.plot.landing_page_network_io.title",
+            "tsquery": "select dt0(bytes_receive_network_interface_sum), dt0(bytes_transmit_network_interface_sum) ",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        },
+        {
+            "chartType": "line",
+            "facetting": "__no_facetting__",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "Datanode Blocks Being Written",
+            "titleResourceId": null,
+            "tsquery": "select dt0(blocks_written) where hostname RLIKE \"node-0[1-4].cluster.com\"",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        },
+
+        {
+            "chartType": "line",
+            "facetting": "__no_facetting__",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "DFS Usage Per-Node",
+            "titleResourceId": null,
+            "tsquery": "select dfs_capacity_used where serviceType = HDFS and hostname RLIKE \"node-0[1-4].cluster.com\"",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        },
+        {
+            "chartType": "line",
+            "facetting": "clusterId",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "Blocks Pending Replication",
+            "titleResourceId": null,
+            "tsquery": "select pending_replication_blocks",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        },
+        {
+            "chartType": "line",
+            "facetting": "clusterId",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "Under-Replicated Blocks in HDFS",
+            "titleResourceId": null,
+            "tsquery": "select under_replicated_blocks where clusterId = 1",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        },
+        {
+            "chartType": "line",
+            "facetting": "__no_facetting__",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "Blocks Read per/s per/Node",
+            "titleResourceId": null,
+            "tsquery": "select dt0(blocks_read) where serviceType = HDFS and hostname RLIKE \"node-0[1-4].cluster.com\"",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        },
+        {
+            "chartType": "line",
+            "facetting": "__no_facetting__",
+            "height": null,
+            "hideIfNoSeries": false,
+            "powerScaleExponent": 4.0,
+            "scale": "linear",
+            "title": "Blocks Replicated",
+            "titleResourceId": null,
+            "tsquery": "select blocks_replicated",
+            "width": null,
+            "ymax": null,
+            "ymin": null
+        }
+    ],
+    "suppressWarnings": false,
+    "userCreated": true,
+    "version": 1
+}
