@@ -25,7 +25,7 @@
             "scale": "linear",
             "title": "Datanode Blocks Being Written",
             "titleResourceId": null,
-            "tsquery": "select dt0(blocks_written) where hostname RLIKE \"node-0[1-4].cluster.com\"",
+            "tsquery": "select dt0(blocks_written) where hostname RLIKE \"node-0[1-4].changeme.com\"",
             "width": null,
             "ymax": null,
             "ymin": null
@@ -40,7 +40,7 @@
             "scale": "linear",
             "title": "DFS Usage Per-Node",
             "titleResourceId": null,
-            "tsquery": "select dfs_capacity_used where serviceType = HDFS and hostname RLIKE \"node-0[1-4].cluster.com\"",
+            "tsquery": "select dfs_capacity_used where serviceType = HDFS and hostname RLIKE \"node-0[1-4].changeme.com\"",
             "width": null,
             "ymax": null,
             "ymin": null
@@ -82,7 +82,7 @@
             "scale": "linear",
             "title": "Blocks Read per/s per/Node",
             "titleResourceId": null,
-            "tsquery": "select dt0(blocks_read) where serviceType = HDFS and hostname RLIKE \"node-0[1-4].cluster.com\"",
+            "tsquery": "select dt0(blocks_read) where serviceType = HDFS and hostname RLIKE \"node-0[1-4].changeme.com\"",
             "width": null,
             "ymax": null,
             "ymin": null
